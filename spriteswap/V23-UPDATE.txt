@@ -1,7 +1,0 @@
-SpriteSwap V23
-
-Trade picker fix:
-- OFFERING: any Sprite marked Owned in your vault, including legacy / Chapter 7 Season 3.
-- LOOKING FOR: current/new released Sprites only.
-
-No new SQL or environment variables are required if V22 is already installed.
