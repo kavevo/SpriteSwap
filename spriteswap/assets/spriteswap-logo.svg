@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="16" y1="16" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#32E6FF"/>
+      <stop offset="0.48" stop-color="#9B5CFF"/>
+      <stop offset="1" stop-color="#FF3FC8"/>
+    </linearGradient>
+    <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(54)">
+      <stop stop-color="#FFF7C2" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFD447" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="30" fill="#0D0E19"/>
+  <rect x="8" y="8" width="112" height="112" rx="30" stroke="url(#g1)" stroke-width="4"/>
+  <circle cx="64" cy="64" r="40" fill="url(#g2)"/>
+  <path d="M36 44C36 36.268 42.268 30 50 30H82C86.4183 30 90 33.5817 90 38V46H82V42H50C46.6863 42 44 44.6863 44 48C44 51.3137 46.6863 54 50 54H76C84.8366 54 92 61.1634 92 70C92 78.8366 84.8366 86 76 86H38V74H46V78H76C80.4183 78 84 74.4183 84 70C84 65.5817 80.4183 62 76 62H50C42.268 62 36 55.732 36 48V44Z" fill="url(#g1)"/>
+  <circle cx="89" cy="33" r="6" fill="#FFD447"/>
+  <circle cx="95" cy="26" r="2.5" fill="#FFF"/>
+</svg>

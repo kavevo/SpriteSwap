@@ -1,0 +1,3 @@
+SpriteSwap V13 — Visual Rebuild
+
+New visual system, hero, rich trade cards, rebuilt messages/profile, Discord identity preserved, no new env vars.
