@@ -1,0 +1,61 @@
+SpriteSwap Discord Login + Auto-Join Setup
+==========================================
+
+1. Discord Developer Portal
+---------------------------
+Create/open your SpriteSwap application.
+
+OAuth2 Redirect URI:
+https://spriteswap.xyz/api/discord-callback
+
+The website requests these OAuth scopes:
+- identify       (display name + avatar)
+- guilds.join    (lets the user approve joining your Discord server)
+
+You do NOT need an Interactions Endpoint URL for login.
+
+2. Create a Bot
+---------------
+In the Discord Developer Portal, open the Bot section for the same application and create a bot if one does not exist.
+
+Invite that bot to the Discord server you want users to join. The bot must already be a member of that server for auto-join to work.
+
+You do not need to give it Administrator just for the OAuth guild join flow.
+
+3. Find your Discord server ID
+------------------------------
+Turn on Discord Developer Mode:
+User Settings -> Advanced -> Developer Mode
+
+Then right-click your server -> Copy Server ID.
+
+4. Vercel environment variables
+--------------------------------
+Add these to the SAME Vercel project that owns spriteswap.xyz:
+
+DISCORD_CLIENT_ID=your Discord application client ID
+DISCORD_CLIENT_SECRET=your Discord application client secret
+DISCORD_BOT_TOKEN=your Discord bot token
+DISCORD_GUILD_ID=the server ID users should join
+SUPABASE_URL=your Supabase project URL
+SUPABASE_SERVICE_ROLE_KEY=your Supabase service-role key
+SITE_URL=https://spriteswap.xyz
+
+IMPORTANT: Never put DISCORD_CLIENT_SECRET, DISCORD_BOT_TOKEN, or SUPABASE_SERVICE_ROLE_KEY in config.js or browser code. Never send those secret values in chat.
+
+5. Supabase
+-----------
+Run the included schema.sql in Supabase SQL Editor. It stores the user's Discord identity in their SpriteSwap profile.
+
+After login, SpriteSwap uses:
+- Discord global display name (fallback: Discord username)
+- Discord avatar / profile picture
+
+The user's Discord identity is refreshed on each login.
+
+6. Redeploy
+-----------
+Redeploy SpriteSwap in Vercel after changing environment variables.
+
+Login flow:
+SpriteSwap -> Discord consent -> Discord profile -> join your server -> SpriteSwap session

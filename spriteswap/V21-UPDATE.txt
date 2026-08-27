@@ -1,0 +1,14 @@
+SpriteSwap V21
+==============
+
+POST TRADE
+- Chapter 7 Season 3 is hidden from the Sprite picker.
+- Offering side shows only current/new Sprites that you own.
+- Wanted side shows only current/new released Sprites.
+- Future live-synced Sprites with season "Latest" remain eligible.
+
+PUBLIC ACCESS
+Vercel Authentication / Deployment Protection is a Vercel project setting, not website code.
+To let everybody open SpriteSwap without a Vercel account:
+Vercel -> spriteswap -> Settings -> Deployment Protection -> disable Vercel Authentication / SSO for Production.
+Discord remains the SpriteSwap account login after this is disabled.
