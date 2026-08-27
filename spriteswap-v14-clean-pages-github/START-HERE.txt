@@ -1,0 +1,17 @@
+SPRITESWAP V9 — START HERE
+==========================
+
+1) Run schema.sql again in Supabase SQL Editor.
+2) Create a Discord application at the Discord Developer Portal.
+3) Add OAuth2 redirect URI:
+   https://spriteswap.xyz/api/discord-callback
+4) Add these Vercel environment variables:
+   DISCORD_CLIENT_ID
+   DISCORD_CLIENT_SECRET
+   SUPABASE_URL
+   SUPABASE_SERVICE_ROLE_KEY
+   SITE_URL=https://spriteswap.xyz
+5) Redeploy Vercel production.
+6) Test Discord Login.
+
+Never expose DISCORD_CLIENT_SECRET or SUPABASE_SERVICE_ROLE_KEY in frontend code.
