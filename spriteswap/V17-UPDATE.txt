@@ -1,0 +1,21 @@
+SpriteSwap V17 — Variant Accuracy + Collection Polish
+=====================================================
+
+FIXED
+- Correct canonical Fortnite.GG artwork paths for Gold Fire, Gold Water, Gold Earth and their C7S3 variant families.
+- Gummy display variants now use Fortnite.GG's real internal Candy artwork paths.
+- Live Fortnite.GG sync now refreshes existing/baseline entries too, so stale/wrong artwork, rarity and drop chance can self-correct.
+- Detail parser prefers the exact og:image from each Fortnite.GG Sprite page.
+- Gummy/Candy is normalized back to the user-facing label "Gummy".
+
+PROFILE / COLLECTION
+- Public collection cards now show variant, rarity and drop chance.
+- Gold/Gummy/Galaxy/Gem/Holofoil/Cube/Quack/Cheat Master each have a distinct card treatment without recoloring the real Sprite artwork.
+- Collection images have more room and are no longer tiny/cropped-looking tiles.
+- Profile summary includes SPECIAL rarity and a variant breakdown.
+- My Collection has search, variant filter, and Owned/Mastered/Missing filters.
+- Variant image failures fall back to the correct base Sprite art before falling back to the SpriteSwap mascot.
+
+SETUP
+- No new Vercel environment variables.
+- No new SQL beyond the V16 live-catalog schema.
