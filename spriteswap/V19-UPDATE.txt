@@ -1,0 +1,32 @@
+SpriteSwap V19 — Trade Builder + Full-Art Cards
+===============================================
+
+REQUIRED DATABASE STEP
+----------------------
+Run the latest schema.sql once in Supabase SQL Editor.
+V19 adds two backward-compatible columns to public.trades:
+- offer_items text[]
+- want_items text[]
+
+Existing single-Sprite trades are automatically backfilled into those arrays.
+
+WHAT CHANGED
+------------
+- Post Trade is now a full trade builder inspired by the marketplace workflow:
+  * up to 8 Sprites offered
+  * up to 8 Sprites wanted
+  * offering picker only shows Sprites marked Owned in your vault
+  * wanted picker only shows released catalog Sprites
+  * exact variant artwork, rarity and variant badges
+  * prevents the same exact Sprite from appearing on both sides
+  * Discord identity + live validation sidebar
+  * local draft autosave until the trade is posted
+- Trade board now renders multi-Sprite listings and +N overflow counts.
+- Vault matching is exact-variant only. Owning Base Aura no longer counts as owning Galaxy Aura.
+- Messages and Sprite detail pages understand multi-Sprite trades.
+- Profile collection artwork sizing was rewritten so the whole image fits in the tile.
+- My Collection artwork sizing received the same full-art fix.
+
+NO NEW VERCEL ENVIRONMENT VARIABLES
+-----------------------------------
+Keep the same Discord/Supabase variables from the previous build.

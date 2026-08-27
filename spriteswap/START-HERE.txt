@@ -1,0 +1,21 @@
+SpriteSwap V19 — START HERE
+===========================
+
+1) In Supabase -> SQL Editor, run the full latest schema.sql ONCE.
+   V19 adds offer_items and want_items for multi-Sprite trade listings.
+
+2) Unzip this package.
+
+3) Replace the files at the ROOT of your existing GitHub SpriteSwap repository.
+   Do not put them inside another spriteswap/ folder.
+
+4) Commit/push to main.
+
+5) Vercel will automatically redeploy the same project and keep the existing environment variables/domain.
+
+6) Test:
+   - Discord login
+   - My Collection / Profile full Sprite art
+   - Post Trade: add up to 8 Sprites on each side
+   - Live trade card matching/timestamps
+   - Messages trade details
